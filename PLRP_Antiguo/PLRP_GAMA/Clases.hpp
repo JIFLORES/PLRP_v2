@@ -26,7 +26,7 @@ class Vehiculo{
 	double capacity;
 	double MaxCapacity;
 	double costoUso;
-	public: 
+	public:
 		//SETTERS
 		void set_Id(string id){
 			this->id = id;
@@ -55,7 +55,7 @@ class Vehiculo{
 		};
 };
 
-class Contenedor{	
+class Contenedor{
 	string id;
 	double MaxCapacity;
 	double coordanateX;
@@ -74,7 +74,7 @@ class Contenedor{
 			this->MaxCapacity = MaxCapacity;
 		};
 		void set_CoordanteX(double coordanateX){
-			this->coordanateX = coordanateX;			
+			this->coordanateX = coordanateX;
 		};
 		void set_CoordanteY(double coordanateY){
 			this->coordanateY = coordanateY;
@@ -119,14 +119,14 @@ class Contenedor{
 		Ruta *get_Ruta(){
 			return this->Rut;
 		};
-}; 
-		
+};
+
 class Deposito{
 	string id;
 	double capacity;
 	double MaxCapacity;
 	double coordanateX;
-	double coordanateY;	
+	double coordanateY;
 	double costoAp;
 	unordered_map<string,Vehiculo*> vehiculos;
 	int contV;
@@ -179,9 +179,9 @@ class Deposito{
 
 			if(this->contV > this->vehiculos.size()){
 				////cout << "no quedan vehiculos" << endl;
-				
+
 			}
-			else{				
+			else{
 				return this->contV;
 			}
 		};
@@ -202,7 +202,7 @@ class Ruta{
 			this->id = id;
 		};
 	   void set_Contenedor(string id,Contenedor* &Cont){
-			
+
 			Cont->set_Link(true);
 			this->Contenedores[id]=Cont;
 		};
@@ -232,5 +232,5 @@ class Ruta{
 			return this->Vehi;
 		};
 
-		
+
 };
